@@ -5,22 +5,23 @@
     font-family: Arial, Helvetica, sans-serif;
 }
 
+.wrapper{
+    display: flex;
+    height: calc(100vh - 100px);
+}
 /*side-bar*/
 .sidebar{
     background-color: #000000;
     width: 300px;
-    height: 90vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between; 
+    padding:10px 10px 0 15px;
+    overflow-y: auto;
 }
 
 /*menu*/
 .menu{
-    background-color: pink;  
     display: flex;
     flex-direction: column;
-    padding-left: 15px;
+    
 }
 
 #logo{
@@ -33,20 +34,41 @@
     vertical-align: middle;
 }
 
-.menu a{
-    margin: 10px 0 0 5px;
-    text-decoration: none;
-    color: white
+.active{
+    color: white;
 }
 
-.menu span{
-    font-size: 15px;
-    font-weight: 700;
+.no-active{
+    color: #4f4f4f;
 }
+
+.no-active img{
+    filter: invert(0.50)
+}
+
+
 
 /*playlist*/
 .playlist{
-    background-color: pink;
+    margin-top: 15px;
+    color: #4f4f4f;
+    max-height: 300px;
+    
+}
+.playlist h4{
+    color: white;
+    margin-bottom: 10px;
+}
+
+.crea-list i{
+    font-size: 40px;
+    color: #a3a3a3;
+
+}
+
+.crea-list span{
+    vertical-align: super;
+    color: #a3a3a3;
 }
 
 
@@ -60,7 +82,7 @@
 .topbar{
     background-color:#080b12;
     width: 100%;
-    height: 5vh;
+    height: 8vh;
     position: fixed;
     z-index: 1;
     opacity: 0.75;
@@ -71,20 +93,53 @@
     background-color:#141922;
     width: calc(100% - 150px);
     overflow-y:auto;
-    height:90vh
 }
 
 
 
-main{
-    display: flex;
-}
 
 
 /*player*/
 .player{
  background-color: #282828;
  width: 100%;
- height: 10vh
+ height: 100px
+}
+
+
+/*attribute*/
+a{
+    margin-top: 10px;
+    text-decoration: none;
+}
+
+span{
+    font-size: 15px;
+    font-weight: 700;
+}
+
+ul{
+    list-style-type: none;
+}
+
+li{
+    margin-top: 10px;
+}
+
+
+
+/*responsive*/
+
+@media screen and (max-width: 769px) {
+
+    .sidebar{
+        width: 50px;
+    }
+
+
+    .main-section{
+        width: calc(100% - 50px);
+    }
+    
 }
 
