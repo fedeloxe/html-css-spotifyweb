@@ -9,6 +9,7 @@
     display: flex;
     height: calc(100vh - 70px);
 }
+
 /*side-bar*/
 .sidebar{
     background-color: #000000;
@@ -38,30 +39,16 @@
     vertical-align: middle;
 }
 
-.active{
-    color: white;
-    border-left: 2px solid greenyellow;
-    margin-left: -5px;
-    padding-left: 5px;
-}
-
-.no-active{
-    color: #4f4f4f;
-}
-
 .no-active img{
     filter: invert(0.50)
 }
 
-
-
 /*playlist*/
 .playlist{
     margin-top: 15px;
-    color: #4f4f4f;
-    
-    
+    color: #4f4f4f; 
 }
+
 .playlist h4{
     color: white;
     margin-bottom: 10px;
@@ -70,14 +57,12 @@
 .crea-list i{
     font-size: 40px;
     color: #a3a3a3;
-
 }
 
 .crea-list span{
     vertical-align: super;
     color: #a3a3a3;
 }
-
 
 /*userinfo*/
 .user-info{
@@ -118,7 +103,6 @@
     display: flex;
     align-items: center;
     justify-content: flex-end;
-    
 }
 
 .topbar a{
@@ -130,6 +114,25 @@
     font-size: small;
     font-weight: 700;
 }
+
+.nav-bar{
+    display: flex;
+    justify-content: center;
+    color:#a3a3a3;
+    margin-top: 100px;
+    width: auto;
+}
+
+.nav-bar ul{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.nav-bar li{
+    margin: 10px 10px;
+}
+
 
 
 /*player*/
@@ -143,7 +146,7 @@
  justify-content: space-between;
 }
 
-.col-song{                 /*son*/
+.col-song{                 /*song*/
     display: flex;
     align-items: center;
     width: 25%;
@@ -200,7 +203,6 @@
     border-radius: 20px;
 }
 
-
 .player-line:before {
     content:'';
     background:rgb(182, 182, 182);
@@ -210,14 +212,12 @@
     border-radius: 20px;
 }
 
-
 .col-volume{                     /*volume*/
     width: 25%;
     display:flex ;
     align-items: center;
     justify-content:flex-end;
     margin-right: 5px
-
 }
 
 .col-volume i{
@@ -240,8 +240,6 @@
     position:absolute;
     border-radius: 20px;
 }
-
-
 
 /*attribute*/
 a{
@@ -269,7 +267,24 @@ li{
     padding-top: 10px;
 }
 
+.active{
+    color: white;
+    border-left: 2px solid greenyellow;
+    margin-left: -5px;
+    padding-left: 5px;
+}
 
+.no-active{
+    color: #4f4f4f;
+}
+
+.active-under{
+    color: white;
+    border-bottom: 2px solid greenyellow;
+    margin-left: -5px;
+    padding-left: 5px;
+
+}
 
 /*responsive*/
 
@@ -290,7 +305,6 @@ li{
     .active{
         border: 0px;
     }
-
 
    .ds-none{
     display: none;
@@ -327,13 +341,9 @@ li{
         flex-direction: column;
         margin-left: 5px;
     }
+}
 
-   
+
+@media screen and (max-width: 992px) {      /*md*/
     
-}
-
-
-@media screen and (max-width: 992px) {         /*md*/
-   
-
-}
+}      
