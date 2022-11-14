@@ -29,6 +29,10 @@
     margin-bottom: 20px;
 }
 
+.logo-small{
+    display: none;
+}
+
 .menu img{
     width: 15%;
     vertical-align: middle;
@@ -36,6 +40,9 @@
 
 .active{
     color: white;
+    border-left: 2px solid greenyellow;
+    margin-left: -5px;
+    padding-left: 5px;
 }
 
 .no-active{
@@ -74,7 +81,23 @@
 
 /*userinfo*/
 .user-info{
-    background-color: pink;
+    margin-top: 150px; 
+}
+
+.user{
+    margin-top: 10px;
+    color: white;
+}
+
+.user span{
+    vertical-align: super;
+    margin-left: 5px;
+}
+
+.user img{
+    width: 10%;
+    background-color:#a3a3a3;
+    border-radius: 50%;
 }
 
 
@@ -111,6 +134,7 @@
 a{
     margin-top: 10px;
     text-decoration: none;
+    color: #4f4f4f;
 }
 
 span{
@@ -126,15 +150,47 @@ li{
     margin-top: 10px;
 }
 
+.line{
+    border-bottom: 1px solid  #4f4f4f;
+    width: 100%;
+    padding-top: 10px;
+}
+
 
 
 /*responsive*/
 
-@media screen and (max-width: 769px) {
+@media screen and (max-width: 576px) {          /*xs*/
 
     .sidebar{
         width: 50px;
     }
+
+    .logo-small{
+        display: block;
+    }
+
+    .menu img{
+        width: 100%;
+    }
+
+    .active{
+        border: 0px;
+    }
+
+
+   .ds-none{
+    display: none;
+   }
+
+   .user-info{
+    text-align: center;
+    margin-top: 530px;
+   }
+
+   .user img{
+    width: 80%;
+   }
 
 
     .main-section{
