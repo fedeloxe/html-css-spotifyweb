@@ -7,12 +7,12 @@
 
 .wrapper{
     display: flex;
-    height: calc(100vh - 100px);
+    height: calc(100vh - 70px);
 }
 /*side-bar*/
 .sidebar{
     background-color: #000000;
-    width: 300px;
+    width: 200px;
     padding:10px 10px 0 15px;
     overflow-y: auto;
 }
@@ -81,7 +81,7 @@
 
 /*userinfo*/
 .user-info{
-    margin-top: 250px; 
+    margin-top: 20rem; 
 }
 
 .user{
@@ -100,11 +100,17 @@
     border-radius: 50%;
 }
 
+/*main-section*/
+.main-section{
+    background-color:#141922;
+    width: calc(100% - 200px);
+    overflow-y:auto;
+}
 
 /*topbar*/
 .topbar{
     background-color:#080b12;
-    width: calc(100% - 300px);
+    width: calc(100% - 200px);
     height: 8vh;
     position: fixed;
     z-index: 1;
@@ -125,33 +131,93 @@
     font-weight: 700;
 }
 
-/*main-section*/
-.main-section{
-    background-color:#141922;
-    width: calc(100% - 150px);
-    overflow-y:auto;
-}
 
 /*player*/
 .player{
  background-color: #282828;
  width: 100%;
- height: 100px;
+ height: 70px;
  display: flex;
  align-items: center;
  color: white;
- justify-content: space-around;
+ justify-content: space-between;
 }
 
 .col-song{
     display: flex;
-    justify-content: space-between;
     align-items: center;
+    width: 25%;
+    margin-left: 5px;
     
 }
 
 .player img{
     width: 40px;
+    margin-right: 10px
+}
+.player span{
+    font-size: 10px;
+    color: #a3a3a3;
+}
+
+.song-icon{
+    margin-left: 10px;
+    color:#a3a3a3;
+}
+
+
+.col-player{
+    width: 50%;
+   display: flex;
+   justify-content: center;
+   flex-direction: column;
+}
+
+.col-icon{
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+.col-icon i{
+    margin: 0 15px;
+    font-size: larger;
+}
+
+
+.player-bar{
+    display: flex;
+    align-items: center ;
+    justify-content: center;
+}
+
+.player-bar span{
+    color: white;
+    margin: 0 5px;
+}
+
+
+
+.player-line{
+    width: 60%;
+    background:rgb(82, 82, 82);
+    position:relative;
+    height:5px;
+    border-radius: 20px;
+}
+
+
+.player-line:before {
+    content:'';
+    background:rgb(182, 182, 182);
+    width:30%;
+    height:5px;
+    position:absolute;
+    border-radius: 20px;
+}
+
+
+.col-volume{
+    width: 25%;
 }
 
 
@@ -224,5 +290,30 @@ li{
         width: calc(100% - 50px);
     }
     
+    .topbar{
+        width: calc(100% - 50px);
+    }
+
+    .col-name{
+        display: flex;
+        flex-direction: column;
+    }
 }
 
+
+@media screen and (max-width: 768px) {       /*s*/
+    .song-icon{
+        display:flex ;
+        flex-direction: column;
+        margin-left: 5px;
+    }
+
+   
+    
+}
+
+
+@media screen and (max-width: 992px) {         /*md*/
+   
+
+}
