@@ -118,7 +118,7 @@
     font-weight: 700;
 }
 
-.nav-bar{
+.nav-bar{          /*nav-bar*/
     display: flex;
     justify-content: center;
     color:#a3a3a3;
@@ -136,7 +136,7 @@
     margin: 10px 10px;
 }
 
-/*album*/
+/*album */
 .music{
     margin: 10px 10px;
 }
@@ -144,17 +144,15 @@
     font-size: 30px;
     color: white;
     font-weight: 800;
-    margin-bottom: 30px;
-}
-
-.album-list{
-    display: flex;
-    justify-content: space-around;
 }
 
 .music img{
     width: 100%;
     margin-bottom: 10px;
+}
+
+.artist img{
+    border-radius: 50%;
 }
 
 .music h4{
@@ -173,10 +171,27 @@
 
 .album{
     width: calc(100vw /8);
-    min-width: 125px;
+    min-width: 150px;
+    margin-top: 30px;
 }
 
 
+.album-list{
+    display: flex;
+    justify-content: space-around;
+}
+
+.for-you-list{
+    display: flex;
+}
+
+.for-you-list .album{
+    margin-right: 20px;
+}
+
+.for-you, .artist{
+    margin-top: 20px;
+}
 
 /*player*/
 .player{
@@ -223,7 +238,7 @@
 }
 
 .col-icon i{
-    margin: 0 15px;
+    margin: 0 5px;
     font-size: larger;
 }
 
@@ -385,11 +400,20 @@ li{
         flex-direction: column;
         margin-left: 5px;
     }
+
+    .album{
+        min-width: 180px;
+    }
 }
 
 
 @media screen and (max-width: 992px) {       /*md*/
     .album-list{
         flex-wrap: wrap;
+        justify-content: flex-start;
+    }
+
+    .album{
+        margin-right: 20px ;
     }
 }   
