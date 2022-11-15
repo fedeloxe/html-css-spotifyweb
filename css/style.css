@@ -2,7 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Montserrat', sans-serif;
 }
 
 .wrapper{
@@ -23,7 +23,6 @@
 .menu{
     display: flex;
     flex-direction: column;
-    
 }
 
 #logo{
@@ -44,12 +43,17 @@
     filter: invert(0.50)
 }
 
+
+
+.no-active:hover .menu-img{
+    filter: invert(0);
+}
+
 /*playlist*/
 .playlist{
     margin-top: 15px;
     color: #4f4f4f; 
     height: 68%;
-
 }
 
 .playlist h4{
@@ -68,10 +72,6 @@
 }
 
 /*userinfo*/
-.user-info{
-
-}
-
 .user{
     margin-top: 10px;
     color: white;
@@ -99,7 +99,7 @@
 .topbar{
     background-color:#080b12;
     width: calc(100% - 200px);
-    height: 8vh;
+    height: 80px;
     position: fixed;
     z-index: 1;
     opacity: 0.75;
@@ -113,7 +113,7 @@
     border: 2px solid white;
     border-radius: 25px;
     padding: 10px 15px;
-    margin-right: 20px;
+    margin-right: 55px;
     font-size: small;
     font-weight: 700;
 }
@@ -175,7 +175,6 @@
     margin-top: 30px;
 }
 
-
 .album-list{
     display: flex;
     justify-content: space-around;
@@ -215,7 +214,7 @@
     width: 40px;
     margin-right: 10px
 }
-.player span{
+.player a{
     font-size: 10px;
     color: #a3a3a3;
 }
@@ -261,13 +260,28 @@
     border-radius: 20px;
 }
 
-.player-line:before {
-    content:'';
+.player-line:hover .bar-cursor{
+    position: absolute;
+    left: 29%;
+    border-radius: 50%;
+    width: 13px;
+    height: 13px;
+    background-color: white;
+    bottom: -4px;
+    
+}
+
+.played-time{
     background:rgb(182, 182, 182);
     width:30%;
     height:5px;
     position:absolute;
     border-radius: 20px;
+}
+
+
+.player-line:hover .played-time{
+    background-color: greenyellow;
 }
 
 .col-volume{                     /*volume*/
@@ -290,13 +304,27 @@
     border-radius: 20px;
 }
 
-.volume-bar:before {
-    content:'';
+.volume-bar-used{
     background:rgb(182, 182, 182);
     width: 15%;
     height:5px;
     position:absolute;
     border-radius: 20px;
+}
+
+.volume-bar:hover .volume-bar-used{
+    background-color: greenyellow;
+}
+
+.volume-bar:hover .bar-cursor-volume{
+    position: absolute;
+    left: 10%;
+    border-radius: 50%;
+    width: 13px;
+    height: 13px;
+    background-color: white;
+    bottom: -84%;
+
 }
 
 /*attribute*/
@@ -343,6 +371,35 @@ li{
     padding-left: 5px;
 }
 
+.link-white:hover{
+    color: white;
+}
+
+.zoom:hover {
+    transform: scale(1.5);
+}
+
+.album-img:hover img{
+    opacity: 0.5;
+}
+
+.label{
+    opacity: 0;
+    color: white;
+    position: absolute;
+    top: 37%;
+    right: 40%;
+    font-size:xxx-large ;
+}
+
+.album-img:hover .label{
+    opacity: 1;
+}
+
+.album-img{
+    position: relative;
+}
+
 
 
 /*responsive*/
@@ -377,7 +434,6 @@ li{
    .user img{
     width: 80%;
    }
-
 
     .main-section{
         width: calc(100% - 50px);
