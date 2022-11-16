@@ -186,7 +186,7 @@
 
 .album{
     width: calc(100vw /8);
-    min-width: 150px;
+    min-width: 130px;
     margin-top: 30px;
     cursor: pointer;
 }
