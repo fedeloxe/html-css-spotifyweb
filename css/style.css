@@ -188,6 +188,7 @@
     width: calc(100vw /8);
     min-width: 150px;
     margin-top: 30px;
+    cursor: pointer;
 }
 
 .album-list{
@@ -252,6 +253,7 @@
 .col-icon{
     text-align: center;
     margin-bottom: 5px;
+    cursor: pointer;
 }
 
 .col-icon i{
@@ -276,6 +278,7 @@
     position:relative;
     height:5px;
     border-radius: 20px;
+    cursor: pointer;
 }
 
 .player-line:hover .bar-cursor{
@@ -320,6 +323,7 @@
     position:relative;
     height:5px;
     border-radius: 20px;
+    cursor: pointer;
 }
 
 .volume-bar-used{
@@ -350,6 +354,7 @@ a{
     margin-top: 10px;
     text-decoration: none;
     color: #4f4f4f;
+    cursor: pointer;
 }
 
 span{
@@ -374,7 +379,6 @@ li{
 .active{
     color: white;
     border-left: 2px solid greenyellow;
-    margin-left: -5px;
     padding-left: 5px;
 }
 
